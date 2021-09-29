@@ -20,13 +20,14 @@ private:
 
 int main()
 {
-    my_struct s = my_struct("My struct");
+    my_struct s("My struct"); // creating objects with constructors that take arguments
 
     s.buildstr("");
     s.buildstr("Hello ");
     s.buildstr("there.");
 
     s.showstr();
+    return 0;
 }
 
 my_struct::my_struct(char *name1)
@@ -37,7 +38,7 @@ my_struct::my_struct(char *name1)
 
 my_struct::~my_struct()
 {
-    cout << name <<" just got destroyed!";
+    cout << name <<" just got destroyed!\n";
 }
 
 void my_struct::buildstr(char *s){
