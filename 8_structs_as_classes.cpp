@@ -1,4 +1,9 @@
 /**
+ * C++: The Complete Reference
+ * by Herbert Schidt
+ * 
+ * Using structs as classes
+ * 
  * The only difference between a class and a struct is that by default all members 
  * are Public in a struct and Private in a class. 
  * In all other respects, structs and classes are equivalent.
