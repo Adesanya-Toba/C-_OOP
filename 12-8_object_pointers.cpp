@@ -3,6 +3,7 @@
  * by Herbert Schidt
  * 
  * Pointer to objects
+ * 
  * Using pointers to access members of a class given a pointer to 
  * an object.
 */
