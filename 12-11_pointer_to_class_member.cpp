@@ -24,6 +24,7 @@ public:
 
 int main()
 {
+    // Notice we create them as int pointers because the addresses/offset it stores are int-type.
     int c1::*data; // data member pointer
     int (c1::*func)(); // function member pointer
     
