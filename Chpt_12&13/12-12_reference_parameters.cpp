@@ -64,7 +64,7 @@ int main()
 
 void neg(int &i) // this will implicitly get the address of i.
 {
-    // It automatically refers to (implicity points to) the argument used to call the function.
+    // It automatically refers to (implicity points to) the argument in the calling function.
     i = -i; // this is a lot sweeter!!!
 }
 
