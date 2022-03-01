@@ -110,7 +110,7 @@ int main()
         cout << s <<"'s balance is: " << n;
         cout << "\n";
     }
-    delete [] m;
+    delete [] m; // m is an array of objects 
 
     return 0;
 }
