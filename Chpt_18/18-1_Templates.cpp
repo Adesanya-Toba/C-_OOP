@@ -11,7 +11,8 @@
  *              // Body of the function
  *          }
  *          
- *          We can use the keyword 'class' or we could the keyword 'typename'
+ *          We can use the keyword 'class' or we could the keyword 'typename'.
+ * 
  * @version 0.1
  * @date 2022-05-30
  * 
