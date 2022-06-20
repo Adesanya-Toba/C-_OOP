@@ -72,6 +72,16 @@ int main()
     int i;
 
     for(i = 0; i <10; i++) num.put(i, i);
-    for(i = 9; i>=0; i--) cout << num.get(i);
+    for(i = 0; i<10; i++) cout << num.get(i);
     cout << "\n";
+
+    // Create another object using num to initialize it
+    array x(num); // Invokes the copy constructor
+    for(int i = 0; i < 10; i++)
+    {
+        cout << x.get(i);
+    }
+    cout << "\n";
+    
+    return 0;
 }
