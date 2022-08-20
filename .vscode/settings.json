@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "string": "cpp"
+        "string": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "vector": "cpp"
     }
 }
