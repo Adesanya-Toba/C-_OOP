@@ -47,6 +47,10 @@ int main()
     cout << "Modified contents: \n";
     for (i = 0; i < v.size(); i++) cout << v[i] << " ";
     cout << endl;
+
+    v.push_back('c');
+
+    for(const auto& my_v : v) cout << my_v << " "; // Using range-based for loops
     
     return 0;
 }
