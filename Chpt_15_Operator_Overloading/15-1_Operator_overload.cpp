@@ -51,8 +51,8 @@ loc loc::operator+(loc op2)
     loc temp;
 
     /**
-     * The reason that the operator+() tkaes only one parameter si that the operand on the 
-     * left side of the + is passed implicitly to the function through the this pointer.
+     * The reason that the operator+() takes only one parameter is that the operand on the 
+     * left side of the + is passed implicitly to the function through the 'this' pointer.
      * 
      * When binary operators are overloaded, it is the object on the let that generates the call 
      * to the operator function.
@@ -66,7 +66,8 @@ loc loc::operator+(loc op2)
 // Overload - for loc
 loc loc::operator-(loc op2)
 {   
-    // Correct way to do this because - doesn't change its operands
+    // Correct way to do this because - doesn't change its operands (i.e. the original - operator doesn't change its operands)
+    // but this does since we
     // loc temp;
 
     // // Notice the order operands
@@ -75,7 +76,7 @@ loc loc::operator-(loc op2)
 
     // return temp;
 
-    longitude = longitude - op2.longitude;
+    this->longitude = longitude - op2.longitude;
     latitude = latitude - op2.latitude;
 
     return *this;
@@ -114,29 +115,37 @@ int main()
 
     ob1.show();
     ob2.show();
+    cout << "\n\n";
 
     ob1 = ob1 + ob2; // Using the overloaded + operator for loc class.
     ob1.show();
+    cout << "\n\n";
 
     (ob1 + ob2).show(); // This works because the operator function for + returns a temp object
+    cout << "\n\n";
 
     ++ob1; // Using prefix increment
     ob1.show();
+    cout << "\n\n";
 
     ob2 = ++ob1;
     ob1.show();
     ob2.show();
+    cout << "\n\n";
 
     (ob1 - ob2).show();
     ob1.show(); // ob1 has been changed because we used the this pointer. Shouldn't be this way though because the real - operator doesn't changes its operands
     ob2.show(); // ob2 stays the same
+    cout << "\n\n";
 
     ob1 = ob2 = ob3; // Multiple assignment
     ob1.show();
     ob2.show();
+    cout << "\n\n";
 
     ob2++; // Uisng postfix increment
     ob2.show();
+    cout << "\n\n";
 
     return 0;
 }
