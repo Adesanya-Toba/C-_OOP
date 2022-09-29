@@ -10,6 +10,7 @@
  */
 #include <iostream>
 #include <list>
+#include <cstdlib>
 
 int main()
 {
@@ -44,12 +45,29 @@ int main()
 
     // Printing list contents in reverse
     p = lst.end();
+    std::cout << "Reversed contents: ";
     while (p != lst.begin()){
         // NOTE: that lst.end() returns an iterator to the address after the last element in the list
         // therefore, it is neccessary to decrement p first to get the last element
         p--;
         std::cout << *p << " ";
     }
+    std::cout << "\n\n";
+
+    // Sorting a list
+    std::list<int> lst2;
+
+    for (i = 0; i < 10; i++) lst2.push_back(rand() % 111);
+
+    std::cout << "Original list contents: ";
+    for(const auto& l : lst2)
+        std::cout << l << " ";
+    std::cout << "\n\n";
+
+    std::cout << "Sorted list: ";
+    lst2.sort();
+    for(const auto& l : lst2) std::cout << l << " ";
+    std::cout << "\n\n";
 
     return 0;
 }
