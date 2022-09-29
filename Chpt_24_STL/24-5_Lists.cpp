@@ -69,5 +69,28 @@ int main()
     for(const auto& l : lst2) std::cout << l << " ";
     std::cout << "\n\n";
 
+    // Merging lists
+    // This will create a combined sorted list and leave the merged list (on the RHS) empty
+    std::list<int> l3;
+    std::list<int> l4;
+
+    for(i=0; i < 10; i+= 2) l3.push_back(i);
+    for(i =1; i < 10; i+=2) l4.push_back(i);
+
+    std::cout << "Original contents:\n";
+    for(const auto& l : l3) std::cout << l << " ";
+    std::cout << "\n";
+    for(const auto& l : l4) std::cout << l << " ";
+    std::cout << "\n";
+
+    // Merge the list
+    l3.merge(l4);
+    if (l4.empty())
+        std::cout << "l4 is now empty!\n\n";
+    
+    std::cout << "Contents after merge: ";
+    for(const auto& l : l3) std::cout << l << " ";
+    std::cout << "\n\n";
+
     return 0;
 }
