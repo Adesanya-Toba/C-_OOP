@@ -38,7 +38,16 @@
         "iterator": "cpp",
         "algorithm": "cpp",
         "memory": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstring": "cpp",
+        "list": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp"
     },
     "C_Cpp.default.cppStandard": "c++20"
 }
