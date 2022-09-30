@@ -25,8 +25,8 @@ bool customCompare(vector<int> &a, vector<int> &b)
     int diffB = b[0] - b[1];
 
     // p1++; p2++;
-    // return diffA < diffB;
-    return (*p1 - *(p1 + 1)) < *p2 - *(p2 +1);
+    return diffA > diffB;
+    // return (*p1 - *(p1 + 1)) < *p2 - *(p2 +1);
 }
 
 bool customSort(vector<int> &a, vector<int> &b)
@@ -93,7 +93,14 @@ int main()
     cout << "\n" << endl;
 
     vector<vector<int>> b {{2,3}, {4,7}, {9,0}, {6,1}};
-    sort(b.begin(), b.end(), customSort);
+    cout << "Original vector:\n";
+    for (const auto& v: b) {
+        for(auto& v2 : v)
+        cout << v2 << " ";
+    }
+    cout << endl;
+
+    sort(b.begin(), b.end(), customCompare);
 
     vector<vector<int>>::iterator p2 = b.begin();
 
