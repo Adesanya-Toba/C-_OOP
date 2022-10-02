@@ -21,6 +21,11 @@ struct CityRecord
     double Latititude, Longitude;
 };
 
+std::ostream& operator<<(std::ostream& o, const CityRecord &a)
+{
+    return std::cout << a.Population;
+}
+
 int main()
 {
     std::map<std::string, CityRecord> cityMap;  //Takes at least 2 template arguments (key, data)
@@ -53,8 +58,13 @@ int main()
     const auto& cities = cityMap;
     if (cities.find("Lagos") != cities.end())
     {
-        const CityRecord& lagosData = cities.at("Lagos");
-        std::cout << "Lagos population: " << lagosData.Population << "\n";
+        // const CityRecord& lagosData = cities.at("Lagos");
+        // std::cout << "Lagos population: " << lagosData.Population << "\n";
+        
+        // Using the <pair> value type to get the elements out of a map 
+        std::map<std::string, CityRecord>:: const_iterator p = cities.find("Lagos");
+        std::cout << "Lagos population: " << p->second << "\n";
+
     }
     
     /**

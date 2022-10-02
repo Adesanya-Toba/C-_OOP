@@ -47,7 +47,8 @@
         "list": "cpp",
         "functional": "cpp",
         "memory_resource": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "forward_list": "cpp"
     },
     "C_Cpp.default.cppStandard": "c++20"
 }
