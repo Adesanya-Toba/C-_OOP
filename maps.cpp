@@ -58,8 +58,8 @@ int main()
     const auto& cities = cityMap;
     if (cities.find("Lagos") != cities.end())
     {
-        // const CityRecord& lagosData = cities.at("Lagos");
-        // std::cout << "Lagos population: " << lagosData.Population << "\n";
+        const CityRecord& lagosData = cities.at("Lagos");
+        std::cout << "Lagos population: " << lagosData.Population << "\n";
         
         // Using the <pair> value type to get the elements out of a map 
         std::map<std::string, CityRecord>:: const_iterator p = cities.find("Lagos");
